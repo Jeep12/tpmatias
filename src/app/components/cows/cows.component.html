@@ -1,0 +1,23 @@
+<!-- src/app/components/cows/cows.component.html -->
+<div class="container" *ngIf="cows">
+    <h1>List of Cows</h1>
+    <div class="grid-container">
+      <div class="grid-item" *ngFor="let cow of cows">
+        <div class="card">
+          <button class="close-btn" (click)="removeCow(cow.id)">×</button>
+          <img [src]="cow.imagen" class="card-img-top" alt="{{ cow.nombre }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ cow.nombre }}</h5>
+            <p class="card-text">Raza: {{ cow.raza }}</p>
+            <p class="card-text">Precio: ${{ cow.precio }}</p>
+            <p class="card-text">Fecha de Nacimiento: {{ cow.fecha_nacimiento | date }}</p>
+            <button class="btn">Ver más</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!cows">
+    Loading...
+  </div>
+  

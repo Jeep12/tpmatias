@@ -1,0 +1,17 @@
+<!-- agregar-vaca.component.html -->
+<form [formGroup]="vacaForm" (ngSubmit)="onSubmit()">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" formControlName="nombre">
+  
+    <label for="raza">Raza:</label>
+    <input type="text" id="raza" formControlName="raza">
+  
+    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+    <input type="date" id="fecha_nacimiento" formControlName="fecha_nacimiento">
+  
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio" formControlName="precio">
+  
+    <button type="submit">Agregar Vaca</button>
+  </form>
+  
